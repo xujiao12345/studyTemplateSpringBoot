@@ -1,5 +1,5 @@
 create table person(
-  id int not null primary key,
+  id int not null primary key AUTO_INCREMENT,
   name varchar(20),
   age int,
   nation varchar(20),

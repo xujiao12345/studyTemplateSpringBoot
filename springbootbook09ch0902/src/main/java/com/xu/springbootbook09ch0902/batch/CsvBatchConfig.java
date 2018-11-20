@@ -72,8 +72,8 @@ public class CsvBatchConfig {
         writer.setItemSqlParameterSourceProvider(
                 new BeanPropertyItemSqlParameterSourceProvider<Person>()
         );
-        String sql="insert into person "+"(id,name,age,nation,address)"+"" +
-                "values(hibernate_sequence.nextval,:name,:age,:nation,:address)";
+        String sql="insert into person "+"(name,age,nation,address)"+"" +
+                "values(:name,:age,:nation,:address)";
         writer.setSql(sql);//设置要执行批处理的sql语句
         writer.setDataSource(dataSource);
         return writer;
